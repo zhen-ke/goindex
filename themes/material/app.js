@@ -293,7 +293,7 @@ function file_video(path) {
 	}
 	// mac
 	if (/(Mac)/i.test(navigator.userAgent)) {
-    playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="iina://${url}"><i class="mdui-icon material-icons">&#xe039;</i>在iina中播放</a>`;
+    playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="iina://weblink?url=${url}"><i class="mdui-icon material-icons">&#xe039;</i>在iina中播放</a>`;
   }
   var content = `
 <div class="mdui-container-fluid">
