@@ -290,13 +290,16 @@ function file_video(path) {
   if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
     //移动端
     playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end"><i class="mdui-icon material-icons">&#xe039;</i>在mxplayer中播放</a>`;
+	}
+	// mac
+	if (/(Mac)/i.test(navigator.userAgent)) {
+    //移动端
+    playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end"><i class="mdui-icon material-icons">&#xe039;</i>在iina中播放</a>`;
   }
   var content = `
 <div class="mdui-container-fluid">
 	<br>
-	<div class="video" style="max-height: 500px">
-		<div id="dplayer"></div>
-	</div>
+	<div id="dplayer"></div>
 	<br>${playBtn}
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
