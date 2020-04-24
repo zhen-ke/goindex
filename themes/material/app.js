@@ -5,7 +5,7 @@ document.write(
   '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.css">'
 );
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/dplayer@1.25.1/dist/DPlayer.min.js">'
+  '<script src="//cdn.jsdelivr.net/npm/dplayer@1.25.1/dist/DPlayer.min.js"></script>'
 );
 // markdown支持
 document.write('<script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>');
