@@ -2,6 +2,13 @@
 document.write(
   '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">'
 );
+// APlayer 支持
+document.write(
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">'
+);
+document.write(
+  '<script src="//cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>'
+);
 // dplayer 支持
 document.write(
   '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.css">'
@@ -305,7 +312,7 @@ function file_video(path) {
   new DPlayer({
     container: document.getElementById("dplayer"),
     screenshot: true,
-    pictureInPicture: true,
+		autoplay:true,
     video: {
       url,
     },
@@ -314,13 +321,12 @@ function file_video(path) {
 
 // 文件展示 音频 |mp3|m4a|wav|ogg|
 function file_audio(path) {
-  var url = window.location.origin + path;
+	var url = window.location.origin + path;
+	let name = decodeURI(window.location.pathname).slice(1)
   var content = `
 <div class="mdui-container-fluid">
 	<br>
-	<audio class="mdui-center" preload controls>
-	  <source src="${url}"">
-	</audio>
+	<div id="aplayer"></div>
 	<br>
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
@@ -334,7 +340,14 @@ function file_audio(path) {
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
-  $("#content").html(content);
+	$("#content").html(content);
+	new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [{
+        name,
+        url,
+    }]
+});
 }
 
 // 图片展示
