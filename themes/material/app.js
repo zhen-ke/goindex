@@ -294,7 +294,9 @@ function file_video(path) {
   var content = `
 <div class="mdui-container-fluid">
 	<br>
-	<div id="dplayer" style="max-height: 500px"></div>
+	<div class="video" style="max-height: 500px">
+		<div id="dplayer"></div>
+	</div>
 	<br>${playBtn}
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
