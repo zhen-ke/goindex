@@ -295,7 +295,7 @@ function file_video(path) {
 <div class="mdui-container-fluid">
 	<br>
 	<div class="video-wrap">
-		div id="dplayer"></div>
+		<div id="dplayer"></div>
 	</div>
 	<br>${playBtn}
 	<!-- 固定标签 -->
