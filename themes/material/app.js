@@ -2,7 +2,7 @@
 document.write(
   '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">'
 );
-// APlayer 支持
+// aplayer 支持
 document.write(
   '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">'
 );
